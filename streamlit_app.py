@@ -21,16 +21,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 #Convert the Snowpark Dataframe to a Pandas Dataframe so we can use the LOC function:
 
 pd_df = my_dataframe.to_pandas()
-#st.dataframe(pd_df)
-#st.stop()
 
-
-# option = st.selectbox(
-#    "How would you like to be contacted?",
-#    ("Banana", "Strawberries", "Peaches"),
-#)
-
-#st.write("You selected:", option)
 name_on_order=st.text_input('Name of the Smoothie', max_chars=50)
 st.write('The name of your order will be: ',name_on_order)
 
